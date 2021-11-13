@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="GB2312"?>
+<sysconfig>
+	<!-- 企业帐号信息 -->
+	<Account>
+		<!-- 用户名 test admin-->
+		<UserName>admin</UserName>
+		<!-- 密码  098f6bcd4621d373cade4e832627b4f6 E10ADC3949BA59ABBE56E057F20F883E-->
+		<Password>e10adc3949ba59abbe56e057f20f883e</Password>
+	</Account>
+	<!--
+		uuid:          批次ID,为空时由程序自动生成 a04ea6ed-ff7f-4da1-81d8-94685f89b643
+		name:          批次名称
+		sendType:      发送方式(群发: 0 , 组发: 1)
+		startTime:     发送开始时间(格式: HH:mm:ss) 
+		endTime:       发送结束时间(格式: HH:mm:ss) 
+		scheduleTime:  计划发送时间(格式: yyyy-MM-dd HH:mm:ss) 
+		deadline:      信息失效时间(格式: yyyy-MM-dd HH:mm:ss) 
+		priority:      信息优先级 
+		bizType:       信息业务类型
+		mobileCount:   一个包包含的号码数量
+		distinctFlag:  是否过滤重复号码(true: 是)
+	-->
+	<Pack uuid="" name="批次名称" sendType="1" startTime="08:00:00" endTime="23:30:00"
+		deadline="2014-03-06 10:00:00" priority="1" bizType="10" distinctFlag="true">
+		<!-- 发送内容 -->
+		<Content>测试短测试短信测试短信试短信测试试短信测试试短信测试试短信测试测试短信测试短信测试短信测试短信测试短信测试短信测试短信测试6</Content>
+		
+        <!-- 
+         size:          号码数量
+         isVip:         是否是 VIP 号码
+         numberSegment: 号码段(不足11位的会自动补 0,补到11位, 超过11位的不截断)
+        -->
+        
+		<MsgSingle numberSegment="15011991317" isVip="true" size="1" content="abc1"></MsgSingle>
+		<MsgSingle numberSegment="15011991318" isVip="true" size="1" content="abc2"></MsgSingle>
+		<MsgSingle numberSegment="15011991319" isVip="true" size="1" content="abc3"></MsgSingle>
+		<MsgSingle numberSegment="15011991316" isVip="true" size="1" content="abc1"></MsgSingle>
+		<MsgSingle numberSegment="15011991315" isVip="true" size="1" content="abc2"></MsgSingle>
+	    <MsgSingle numberSegment="15011991314" isVip="true" size="1" content="66666"></MsgSingle>
+		<!--<MsgSingle numberSegment="15866529" isVip="false" size="50"></MsgSingle>
+		<MsgSingle numberSegment="12066529" isVip="false" size="10"></MsgSingle>
+		<MsgSingle numberSegment="13511101231" isVip="false" size="5"></MsgSingle>
+		<MsgSingle numberSegment="13511101232" isVip="false" size="5"></MsgSingle>
+		<MsgSingle numberSegment="13511101233" isVip="false" size="5"></MsgSingle>
+		<MsgSingle numberSegment="1587652" isVip="true" size="50"></MsgSingle>
+		<MsgSingle numberSegment="15011991318" isVip="false" size="1"></MsgSingle>
+		<MsgSingle numberSegment="15011991319" isVip="false" size="1"></MsgSingle>
+		<MsgSingle numberSegment="15011991315" isVip="false" size="1"></MsgSingle>
+		<MsgSingle numberSegment="1358010" isVip="false" size="10"></MsgSingle>
+		<MsgSingle numberSegment="1339010" isVip="false" size="10"></MsgSingle>-->
+	</Pack>
+	
+	<!-- 发包数量(号码总数= 包大小(mobileCount) * 包数量 (packSize)) -->
+	<PackSize>1</PackSize>
+
+	<!-- 包发送间隔(单位：毫秒) -->
+	<SendIntervalTime>10</SendIntervalTime>
+
+	<!-- 发送线程数 -->
+	<ThreadNum>1</ThreadNum>
+
+	<!--192.168.0.208 8091 MTReceiver 模块服务器信息 127.0.0.1 192.168.0.40 192.168.1.232-->
+	<ServerInfo>
+		<ServerIp>192.168.0.101</ServerIp>
+		<ServerPort>8090</ServerPort>
+	</ServerInfo>
+</sysconfig>
